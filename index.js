@@ -11,3 +11,13 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
+app.use((req, res, next ) => {
+    next();
+});
+
+app.get("/home", (req,res) => {
+    res.render("home");
+});
+
+app.get("/images/:images", homeController.paramsimage);
+app.listen(app.get(port));

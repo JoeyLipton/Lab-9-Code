@@ -1,0 +1,19 @@
+{
+  "name": "lab-9-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeyLipton/Lab-9-Code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoeyLipton/Lab-9-Code/issues"
+  },
+  "homepage": "https://github.com/JoeyLipton/Lab-9-Code#readme"
+}
