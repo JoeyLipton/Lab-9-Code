@@ -11,9 +11,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(expressLayouts)
 app.use(express.json());
 
-app.get("/:page", homeController.sendReqParam);
-app.get("/images/:page", homeController.sendReqParam);
+app.get("/home", homeController.sendReqParam);
+app.get("/images/:imageNumber", homeController.sendReqParam);
 
+`
 app.get("", (req,res) => {
     res.redirect("/home");
 });
@@ -22,6 +23,6 @@ app.get("/home", (req,res) => {
     res.render("home");
 });
 
-
+`
 
 app.listen(port);

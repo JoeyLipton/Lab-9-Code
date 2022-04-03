@@ -1,0 +1,16 @@
+.header {
+    width: 75%;
+    text-align: center;
+}
+.thumb1 {
+    float: left;
+    width: 30%;
+}
+.thumb2 {
+    float: left;
+    width: 30%;
+}
+.thumb3 {
+    float: left;
+    width: 30%;
+}

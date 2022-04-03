@@ -1,15 +1,16 @@
 const path = require("path");
 
 exports.sendReqParam = (req, res) => {
-    switch (req.params.page) {
-        case 'arch' :
-            res.sendFile(path.join(__dirname, "../views/arch.html"));
+    let imageNumber = req.params.imageNumber;
+    switch (req.params.imageNumber) {
+        case '1' :
+            res.render("1");
             break;
-        case 'deb' :
-            res.sendFile(path.join(__dirname, "../views/deb.html"));
+        case '2' :
+            res.render("2");
             break;
-        case 'rhel' :
-            res.sendFile(path.join(__dirname, "../views/rhel.html"));
+        case '3' :
+            res.render("3");
             break;
         default :
             res.render("index", {
