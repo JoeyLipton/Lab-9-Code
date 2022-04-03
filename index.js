@@ -1,7 +1,7 @@
 const port = 3000;
 const express = require("express"),
     app = express(),
-    homeController = require("./controllers/homeController")
+    controller = require("./controllers/controller")
 const expressLayouts = require('express-ejs-layouts')
 
 app.set("port", port);
@@ -11,18 +11,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(expressLayouts)
 app.use(express.json());
 
-app.get("/home", homeController.sendReqParam);
-app.get("/images/:imageNumber", homeController.sendReqParam);
-
-`
-app.get("", (req,res) => {
-    res.redirect("/home");
-});
-
-app.get("/home", (req,res) => {
-    res.render("home");
-});
-
-`
+app.get("/", controller.sendIndex);
+app.get("/home", controller.sendIndex);
+app.get("/images/:image", controller.sendImage);
 
 app.listen(port);
