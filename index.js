@@ -11,20 +11,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(expressLayouts)
 app.use(express.json());
 
-app.use((req, res, next ) => {
-    next();
-});
+app.get("/:page", homeController.sendReqParam);
+app.get("/images/:page", homeController.sendReqParam);
 
 app.get("", (req,res) => {
-    res.render("index");
+    res.redirect("/home");
 });
 
 app.get("/home", (req,res) => {
     res.render("home");
 });
 
-app.get("/images/:images", (req,res) => {
-    res.render("index");
-});
+
 
 app.listen(port);
